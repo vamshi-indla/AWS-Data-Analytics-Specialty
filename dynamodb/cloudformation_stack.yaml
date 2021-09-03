@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    d756e1b0-ced0-4eb9-864d-6eda1ee1acd9:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 160
+        'y': 90
+      z: 0
+      embeds: []
+Resources:
+  PetTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: pet_species
+          AttributeType: S
+        - AttributeName: pet_id
+          AttributeType: 'N'
+      KeySchema:
+        - AttributeName: pet_species
+          KeyType: HASH
+        - AttributeName: pet_id
+          KeyType: RANGE
+      TableName: PetInventory
+      BillingMode: PAY_PER_REQUEST
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: d756e1b0-ced0-4eb9-864d-6eda1ee1acd9
