@@ -1,6 +1,6 @@
 """
 Usage:
-    python multipartupload.py -f WhatsApp\ Video\ 2021-06-22\ at\ 22.17.57.mp4 -b vkis3books -cs 5 -p 4
+    python multipartupload.py -f file1.mov at\ 22.17.57.mp4 -b vkis3books -cs 5 -p 4
 """
 import boto3
 import argparse
